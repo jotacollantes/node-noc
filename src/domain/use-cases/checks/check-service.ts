@@ -12,6 +12,7 @@ type ErrorCallback = ( error: string ) => void;
 export class CheckService implements CheckServiceUseCase {
 
   constructor(
+    //Se define como rovate readonly para que no se modifique los callback enviados como parametros al constructor
     private readonly successCallback: SuccessCallback,
     private readonly errorCallback: ErrorCallback
   ) {}
